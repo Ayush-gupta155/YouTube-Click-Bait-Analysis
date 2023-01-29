@@ -1,5 +1,5 @@
 from sklearn.feature_extraction.text import TfidfVectorizer
-import _pickle as pickle
+import pickle as pickle
 from sklearn import metrics
 from sklearn import svm
 from sklearn.svm import SVC
@@ -12,9 +12,9 @@ titles = {
     "0":[],
     "1":[]
 }
-with open ('Datasets/ClickbaitDataset.txt',encoding='utf8') as f:
+with open (r'Datasets/ClickbaitDataset.txt',encoding='utf8') as f:
     titles["1"] = f.read().splitlines()
-with open ('Datasets/NonClickbaitDataset.txt',encoding='utf8') as f:
+with open (r'Datasets/NonClickbaitDataset.txt',encoding='utf8') as f:
     titles["0"] = f.read().splitlines()
 traininglabels = [0]*len(titles["0"]) + [1]*len(titles["1"])
 trainingset = titles["0"] + titles["1"]
