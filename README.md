@@ -33,7 +33,7 @@ Detection of youtube clickbait content and highlighting the same by rendering th
  - Creating a layer of flask server on top of the trained model, which will provide REST endpoints to retrieve the response.
  - Flask server is deployed on Microsoft Azure.
  - Creating a chrome extension using manifest.json for configuration.
- - The extension will inject the content script when a certain url provided in manifest.json is triggered in the browser.
+ #The extension will inject the content script when a certain url provided in manifest.json is triggered in the browser.
  #The extension will make POST requests to https://ytclickbait.azurewebsites.net REST endpoint and will make changes to the webpage based on the returned response.
 
 
